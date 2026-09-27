@@ -1,41 +1,41 @@
-# C# 后端项目学习计划
+# C# Backend Learning Plan
 
-本项目从 C# 基础练习逐步发展为有数据库的模板生成 API。按每周约 10–15 小时暂排 10–12 周，实际进度以独立练习结果为准。
+This project grows from small C# exercises into a database-backed template document API. The provisional schedule is 10–12 weeks at roughly 10–15 hours per week. Progress depends on what can be implemented and explained independently.
 
-## 阶段与验收
+## Stages and completion criteria
 
-| 阶段 | 内容 | 完成标准 |
+| Stage | Topics | Completion criteria |
 | --- | --- | --- |
-| 1：C# 基础 | 变量、字符串、数字、输入输出、判断、循环 | 能独立写出接收姓名和利率、检查输入并输出文本的小程序 |
-| 2：组织代码 | 方法、类、对象、集合、异常、调试 | 能拆分模板填充步骤，支持多个模板，定位简单错误 |
-| 3：第一个 API | HTTP、JSON、ASP.NET Core、路由和请求响应 | 能接收姓名和利率并返回生成文本，解释请求如何进入代码 |
-| 4：持久化 | SQL、表、主外键、EF Core、迁移 | 保存模板与生成记录，重启后仍能查询 |
-| 5：结构和可靠性 | DI 生命周期、分层、DTO、状态码、日志和测试 | 能解释设计，并验证关键成功和失败场景 |
-| 6：作品整理 | 需求变更、运行说明、英文演示、发布版本 | 别人能按说明运行；能独立完成一个小改动并解释项目 |
+| 1: C# basics | Variables, strings, numbers, input and output, conditions, loops | Write a small program that accepts a name and rate, checks input, and prints a result. |
+| 2: Organising code | Methods, classes, objects, collections, exceptions, debugging | Split template filling into steps, support multiple templates, and locate a simple bug. |
+| 3: First API | HTTP, JSON, ASP.NET Core, routes, requests and responses | Accept a name and rate through an endpoint, return a result, and explain the request flow. |
+| 4: Persistence | SQL, tables, keys, EF Core, migrations | Save templates and generated results, then retrieve them after restarting the program. |
+| 5: Structure and reliability | Dependency injection lifetimes, layers, DTOs, status codes, logs, tests | Explain design choices and verify important success and failure cases. |
+| 6: Portfolio readiness | Requirement changes, setup guide, English project walkthrough | Help another person run the project and independently implement a small change. |
 
-## Git 与 GitHub 同步学习
+## Learn Git alongside C#
 
-- 第一阶段：认识工作目录、修改记录、暂存、提交、推送；能查看一次提交改了什么。
-- 第二阶段：学会忽略生成文件，检查每次提交的内容，阅读历史差异。
-- 第三阶段：在一个功能分支完成改动，创建 Pull Request，检查差异后合并。
-- 第四阶段：用 Issue 写清功能需求和验收条件，把改动关联到对应任务。
-- 第五阶段：在已有可运行测试后加入 GitHub Actions，验证构建与测试。
-- 第六阶段：整理英文 README、示例请求、测试说明、已知限制，创建可演示版本。
+- Stage 1: Inspect changes, stage files, commit, push, and read commit history.
+- Stage 2: Ignore generated files and review the contents of each commit.
+- Stage 3: Make a change on a feature branch and review its pull request.
+- Stage 4: Record requirements and acceptance criteria in an Issue.
+- Stage 5: Add GitHub Actions after a runnable project and useful tests exist.
+- Stage 6: Document setup, example requests, tests, design decisions, and known limitations.
 
-提交频率跟随实际成果，不追求每天凑提交。每次提交只描述已经完成的变化，不把练习包装成商业项目。
+Commit when there is a real, checked change. The history should describe completed learning work accurately.
 
-## 每次练习
+## Practice routine
 
-1. 先用中文写出需求和实现步骤。
-2. 自己尝试 10–15 分钟。
-3. 卡住时查资料或请求提示，先理解问题。
-4. 看过示例后关闭示例，重新实现。
-5. 修改一个条件，确认能迁移所学。
-6. 运行并检查结果，再提交真实完成的改动。
+1. Describe the requirement and its implementation steps in plain language.
+2. Try the task independently for 10–15 minutes.
+3. If stuck, consult documentation or ask for a hint and identify the specific gap.
+4. After reading an example, close it and implement the solution again.
+5. Change one input or requirement to check understanding.
+6. Run the code, inspect the result, and commit the completed change.
 
-## 完成记录
+## Progress log
 
-开始练习后，在此记录日期、完成的功能、验证方法和仍需复习的问题。不要预填未完成成果。
+Record the date, completed behaviour, verification, and concepts to revisit. Do not pre-fill unfinished work.
 
-| 日期 | 功能 | 验证方法 | 待复习 |
+| Date | Completed behaviour | Verification | Review next |
 | --- | --- | --- | --- |

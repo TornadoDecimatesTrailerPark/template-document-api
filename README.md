@@ -37,7 +37,7 @@ dotnet run --project src/TemplateDocument.Console/TemplateDocument.Console.cspro
 Expected output:
 
 ```text
-Hello Alex, your annual interest rate at Sample Bank is 6.5%
+Hello Jamie, your annual interest rate at Sample Bank is 5.75%
 ```
 
 ## Learning milestones
