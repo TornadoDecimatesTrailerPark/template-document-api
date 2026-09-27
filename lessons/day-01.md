@@ -1,36 +1,46 @@
-# 第一天 变量和文本输出
+# Day 1: Variables and Console Output
 
-目标：理解 C# 变量、字符串、decimal 数字和控制台输出。练习约 45–60 分钟，环境配置另计。
+Goal: Learn C# variables, strings, decimal numbers, and console output. Allow about 45–60 minutes for the exercise, plus setup time.
 
-## 任务
+## Exercise
 
-创建控制台程序，使用三个变量保存：
+Create a console program with three variables:
 
-- 姓名：Alex
-- 银行名字：Sample Bank
-- 年利率：6.5
+- Customer name: Alex
+- Bank name: Sample Bank
+- Annual interest rate: 6.5
 
-输出：
-
-```text
-Hello Alex, your annual interest rate at Sample Bank is 6.5%.
-```
-
-今天约定数字 6.5 表示 6.5%，先使用固定变量，不要求用户输入。以后设计 API 时统一约定利率单位，并同步修改代码、文档和测试。
-
-## 验收
-
-- 程序能运行，输出包含三个变量的值。
-- 将姓名改为 Jamie、利率改为 5.75，输出随之变化。
-- 能解释 string、decimal、数字后的 m 和 Console.WriteLine 的用途。
-- 关闭示例后，可以重新写出相同功能；允许查单个语法。
-
-## 第一次代码提交
-
-完成并检查变化后再提交。建议提交说明：
+Expected output:
 
 ```text
-Add first C# template output exercise
+Hello Alex, your annual interest rate at Sample Bank is 6.5%
 ```
 
-不要提交编译产物。提交后查看历史，确认能找到自己的代码变化。
+For this exercise, `6.5` represents 6.5 percent. It is a fixed value rather than user input. Define one clear rate convention before building an API and keep the code, examples, and tests consistent with it.
+
+## Variation
+
+Change the customer name to Jamie and the annual interest rate to 5.75. The output should change without rewriting the output statement:
+
+```text
+Hello Jamie, your annual interest rate at Sample Bank is 5.75%
+```
+
+## Key concepts
+
+- A variable stores a value. `customerName` is the variable name; `"Jamie"` is a string value assigned to it.
+- In an interpolated string, `{customerName}` inserts the current value of that variable into the output.
+- The `m` suffix in `5.75m` tells C# to treat the number as a `decimal` literal. It does not mean percent.
+- The `%` character in the output string is what displays the percent sign.
+- `Console.WriteLine` prints the completed line.
+
+## Completion criteria
+
+- The program runs and prints the expected values.
+- Changing the two variables changes the output.
+- Explain `string`, `decimal`, `m`, interpolation, and `Console.WriteLine` in your own words.
+- Recreate the program without copying a complete solution. Looking up individual syntax is fine.
+
+## Git practice
+
+Review the changed files, commit the working program, and inspect the commit history. Keep generated build files out of the repository.
