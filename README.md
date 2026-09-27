@@ -4,7 +4,7 @@ A learning project for building a C# and ASP.NET Core API that fills text templa
 
 ## Current status
 
-Project planning and learning exercises only. The application, database integration, and automated tests have not been implemented yet.
+The first C# console exercise is implemented and runs. The API, database integration, and automated tests have not been implemented yet.
 
 The project starts with a small console application. API endpoints and persistence will be added after the underlying C# concepts have been practised.
 
@@ -24,7 +24,21 @@ The project starts with a small console application. API endpoints and persisten
 - xUnit for automated tests
 - GitHub Actions for build and test checks once an application exists
 
-The target framework and database provider will be recorded when the application is created. This repository currently has no runtime prerequisites or runnable application.
+The console exercise targets .NET 9. The framework and database provider for the later API will be recorded when that application is created.
+
+## Run the first exercise
+
+Install a .NET 9 SDK. From the repository root, run:
+
+```sh
+dotnet run --project src/TemplateDocument.Console/TemplateDocument.Console.csproj
+```
+
+Expected output:
+
+```text
+Hello Alex, your annual interest rate at Sample Bank is 6.5%
+```
 
 ## Learning milestones
 
