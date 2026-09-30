@@ -6,6 +6,8 @@ A learning project for building a C# and ASP.NET Core API that fills text templa
 
 The C# console application validates a sample principal and annual interest rate, calculates one year of simple interest through reusable methods, and prints the amount with two decimal places. The API, database integration, and automated test suite have not been implemented yet.
 
+A separate input practice application reads console text, attempts to parse a decimal, and displays either the parsed value or a failure message.
+
 The project starts with a small console application. API endpoints and persistence will be added after the underlying C# concepts have been practised.
 
 ## Planned capabilities
@@ -24,7 +26,7 @@ The project starts with a small console application. API endpoints and persisten
 - xUnit for automated tests
 - GitHub Actions for build and test checks once an application exists
 
-The console exercise targets .NET 9. The framework and database provider for the later API will be recorded when that application is created.
+The console exercises target .NET 9. The framework and database provider for the later API will be recorded when that application is created.
 
 ## Run the console exercise
 
@@ -44,6 +46,24 @@ Annual interest: 115.00
 The sample principal is `2000m` and the annual interest rate is `5.75m`, representing 5.75 percent. The exercise uses `principal * annualInterestRate / 100` for one year of simple interest. Principal must be greater than zero; a zero interest rate is allowed. Invalid inputs print a validation message and skip the calculation.
 
 This is a learning example with fixed inputs. It does not model compounding, tax, fees, or a real banking product. `F2` rounds for display to two decimal places without changing the stored amount. The example output assumes a culture that uses a decimal point.
+
+## Run the input practice exercise
+
+From the repository root, run:
+
+```sh
+dotnet run --project src/TemplateDocument.InputPractice/TemplateDocument.InputPractice.csproj
+```
+
+Enter one value when prompted. These cases were checked against the saved implementation on 2026-10-01:
+
+| Input | Result after the prompt |
+| --- | --- |
+| `2000` | `Parsed principal: 2000.00` |
+| `0` | `Parsed principal: 0.00` |
+| `abc` | `Please enter a valid number.` |
+
+`decimal.TryParse` returns a Boolean indicating whether conversion succeeded and supplies the decimal through its `out` parameter. The `parsed` variable stores that Boolean, and `if (parsed)` chooses the branch. The output examples assume a culture that uses a decimal point. This exercise checks numeric conversion; it does not yet apply the interest application's principal validation rule.
 
 ## Learning milestones
 

@@ -40,3 +40,4 @@ Record the date, completed behaviour, verification, and concepts to revisit. Do 
 | Date | Completed behaviour | Verification | Review next |
 | --- | --- | --- | --- |
 | 2026-10-01 | Guided console validation and reusable methods for one year of simple interest; syntax corrected with assistance. | Console run passed; seven input cases checked against the current source, including zero and negative boundaries. No committed automated test suite yet. | English semicolon placement, consistent variable names and case, scope, and independent recreation. |
+| 2026-10-01 | Added learner-written conditional branches to a provided ReadLine/TryParse scaffold in a separate input practice project. | Build passed with zero warnings and errors; saved code checked with `2000`, `0`, and `abc`. | Explain the Boolean return value and decimal output, distinguish parsing from principal validation, and recreate the flow independently. |
