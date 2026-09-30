@@ -4,7 +4,7 @@ A learning project for building a C# and ASP.NET Core API that fills text templa
 
 ## Current status
 
-The first C# console exercise is implemented and runs. The API, database integration, and automated tests have not been implemented yet.
+The C# console application validates a sample principal and annual interest rate, calculates one year of simple interest through reusable methods, and prints the amount with two decimal places. The API, database integration, and automated test suite have not been implemented yet.
 
 The project starts with a small console application. API endpoints and persistence will be added after the underlying C# concepts have been practised.
 
@@ -26,7 +26,7 @@ The project starts with a small console application. API endpoints and persisten
 
 The console exercise targets .NET 9. The framework and database provider for the later API will be recorded when that application is created.
 
-## Run the first exercise
+## Run the console exercise
 
 Install a .NET 9 SDK. From the repository root, run:
 
@@ -38,11 +38,16 @@ Expected output:
 
 ```text
 Hello Jamie, your annual interest rate at Sample Bank is 5.75%
+Annual interest: 115.00
 ```
+
+The sample principal is `2000m` and the annual interest rate is `5.75m`, representing 5.75 percent. The exercise uses `principal * annualInterestRate / 100` for one year of simple interest. Principal must be greater than zero; a zero interest rate is allowed. Invalid inputs print a validation message and skip the calculation.
+
+This is a learning example with fixed inputs. It does not model compounding, tax, fees, or a real banking product. `F2` rounds for display to two decimal places without changing the stored amount. The example output assumes a culture that uses a decimal point.
 
 ## Learning milestones
 
-See [LEARNING_PLAN.md](LEARNING_PLAN.md) for the staged plan and completion criteria, starting with [Day 1](lessons/day-01.md).
+See [LEARNING_PLAN.md](LEARNING_PLAN.md) for the staged plan and completion criteria. [Day 1](lessons/day-01.md) covers variables and console output; [Day 2](lessons/day-02.md) adds conditions, validation, and reusable methods.
 
 Milestones are completed when their behaviour can be demonstrated and the implementation explained. Planned functionality is not treated as implemented functionality.
 
