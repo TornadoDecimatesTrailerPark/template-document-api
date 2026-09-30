@@ -6,7 +6,7 @@ A learning project for building a C# and ASP.NET Core API that fills text templa
 
 The C# console application validates a sample principal and annual interest rate, calculates one year of simple interest through reusable methods, and prints the amount with two decimal places. The API, database integration, and automated test suite have not been implemented yet.
 
-A separate input practice application reads console text, attempts to parse a decimal, and displays either the parsed value or a failure message.
+A separate input practice application reads console text, attempts to parse a decimal, and distinguishes invalid numeric input, non-positive principal, and valid principal.
 
 The project starts with a small console application. API endpoints and persistence will be added after the underlying C# concepts have been practised.
 
@@ -60,10 +60,12 @@ Enter one value when prompted. These cases were checked against the saved implem
 | Input | Result after the prompt |
 | --- | --- |
 | `2000` | `Parsed principal: 2000.00` |
-| `0` | `Parsed principal: 0.00` |
+| `1` | `Parsed principal: 1.00` |
+| `0` | `Principal must be greater than zero.` |
+| `-10` | `Principal must be greater than zero.` |
 | `abc` | `Please enter a valid number.` |
 
-`decimal.TryParse` returns a Boolean indicating whether conversion succeeded and supplies the decimal through its `out` parameter. The `parsed` variable stores that Boolean, and `if (parsed)` chooses the branch. The output examples assume a culture that uses a decimal point. This exercise checks numeric conversion; it does not yet apply the interest application's principal validation rule.
+`decimal.TryParse` returns a Boolean indicating whether conversion succeeded and supplies the decimal through its `out` parameter. The `parsed` variable stores that Boolean. The branch chain checks conversion first, then requires principal to be greater than zero. Parsing success alone does not establish a valid principal. The output examples assume a culture that uses a decimal point.
 
 ## Learning milestones
 

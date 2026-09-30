@@ -2,9 +2,19 @@ Console.WriteLine("Enter principal:");
 string? principalText = Console.ReadLine();
 bool parsed = decimal.TryParse(principalText, out decimal principal);
 
-// Exercise: Add an if/else below that checks parsed.
-// On success, print "Parsed principal: " and principal with two decimal places.
-// On failure, print "Please enter a valid number."
-// Explain why "0" and "abc" take different branches.
+// Check conversion before validating the principal.
+// Report numeric input errors separately from non-positive principal.
+// Display valid principal with two decimal places.
 
-if (parsed) { Console.WriteLine($"Parsed principal: {principal:f2}"); } else { Console.WriteLine("Please enter a valid number."); }
+if (parsed == false)
+{
+    Console.WriteLine("Please enter a valid number.");
+}
+else if (parsed && principal <= 0)
+{
+    Console.WriteLine("Principal must be greater than zero.");
+}
+else
+{
+    Console.WriteLine($"Parsed principal: {principal:f2}");
+}
