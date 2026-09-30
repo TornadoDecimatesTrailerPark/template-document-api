@@ -45,6 +45,8 @@ Record the date, completed behaviour, verification, and concepts to revisit. Do 
 
 ## Next session
 
+Open `src/TemplateDocument.InputPractice/TemplateDocument.InputPractice.sln` in Visual Studio to reopen the practice project.
+
 Resume in `src/TemplateDocument.InputPractice/Program.cs`. The current exercise separates numeric conversion errors from non-positive principal and displays valid principal with two decimal places. The saved implementation passed checks with `2000`, `1`, `0`, `-10`, and `abc`.
 
 Start with the unanswered Feynman question: when execution reaches `else if (parsed && principal <= 0)`, can `parsed` still be false? Explain the branch flow and whether `parsed &&` is necessary before changing the code. Independent recreation of the complete input and validation flow remains to be demonstrated.
