@@ -42,11 +42,12 @@ Record the date, completed behaviour, verification, and concepts to revisit. Do 
 | 2026-10-01 | Guided console validation and reusable methods for one year of simple interest; syntax corrected with assistance. | Console run passed; seven input cases checked against the current source, including zero and negative boundaries. No committed automated test suite yet. | English semicolon placement, consistent variable names and case, scope, and independent recreation. |
 | 2026-10-01 | Added learner-written conditional branches to a provided ReadLine/TryParse scaffold in a separate input practice project. | Build passed with zero warnings and errors; saved code checked with `2000`, `0`, and `abc`. | Explain the Boolean return value and decimal output, distinguish parsing from principal validation, and recreate the flow independently. |
 | 2026-10-01 | Extended learner-written input branches to validate principal; corrected a mistyped boundary after learner clarification. | Build passed; saved source checked with `2000`, `1`, `0`, `-10`, and `abc`. | Explain why `parsed` is already true in the else-if branch, and recreate the flow independently. |
+| 2026-10-01 | Explained why reaching the else-if branch implies successful parsing and removed its redundant Boolean check. | Build passed with zero warnings and errors; saved code checked with `abc`, `0`, and `1`. | Apply console input and parsing to an annual interest rate, and recreate the complete flow independently. |
 
 ## Next session
 
 Open `src/TemplateDocument.InputPractice/TemplateDocument.InputPractice.sln` in Visual Studio to reopen the practice project.
 
-Resume in `src/TemplateDocument.InputPractice/Program.cs`. The current exercise separates numeric conversion errors from non-positive principal and displays valid principal with two decimal places. The saved implementation passed checks with `2000`, `1`, `0`, `-10`, and `abc`.
+Resume in `src/TemplateDocument.InputPractice/Program.cs`. The current exercise separates numeric conversion errors from non-positive principal and displays valid principal with two decimal places. Its simplified branch chain passed the latest checks with `abc`, `0`, and `1`.
 
-Start with the unanswered Feynman question: when execution reaches `else if (parsed && principal <= 0)`, can `parsed` still be false? Explain the branch flow and whether `parsed &&` is necessary before changing the code. Independent recreation of the complete input and validation flow remains to be demonstrated.
+Next, add annual interest rate input inside the valid-principal branch: prompt for a rate in percent, read its text, attempt decimal conversion using distinct variables, and display the Boolean result and decimal value. Explain why the rate prompt belongs in this branch. Rate validation and interest calculation are later steps. Independent recreation of the complete input and validation flow remains to be demonstrated.

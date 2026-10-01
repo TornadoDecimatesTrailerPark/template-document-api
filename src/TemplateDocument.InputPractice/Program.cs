@@ -10,7 +10,7 @@ if (parsed == false)
 {
     Console.WriteLine("Please enter a valid number.");
 }
-else if (parsed && principal <= 0)
+else if (principal <= 0)
 {
     Console.WriteLine("Principal must be greater than zero.");
 }
